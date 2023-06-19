@@ -24,6 +24,5 @@ namespace FactoryMethod.ex2
                     throw new ApplicationException(string.Format("Vehicle '{0}' cannot be created", Vehicle));
             }
         }
-
     }
 }

@@ -18,7 +18,7 @@ abstract class Creator
     public string SomeOperation()
     {
         // Call the factory method to create a Product object.
-        var product = FactoryMethod();
+        IProduct product = FactoryMethod();
         // Now, use the product.
         var result = "Creator: The same creator's code has just worked with "
                      + product.Operation();

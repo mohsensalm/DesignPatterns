@@ -13,5 +13,6 @@ namespace FactoryMethod.ex2
     {
         public abstract IFactory GetVehicle(string Vehicle);
 
+
     }
 }
