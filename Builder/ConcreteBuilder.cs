@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RefactoringGuru.DesignPatterns.Builder.Conceptual;
-
+﻿
 namespace Builder
 {
     public class ConcreteBuilder : IBuilder
