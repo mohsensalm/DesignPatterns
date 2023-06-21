@@ -15,20 +15,20 @@ namespace Builder
     // may not always follow the same interface.
     public class Product
     {
-        private List<object> _parts = new List<object>();
+        private readonly List<object> _parts = new ();
 
         public void Add(string part)
         {
-            this._parts.Add(part);
+            _parts.Add(part);
         }
 
         public string ListParts()
         {
-            string str = string.Empty;
+            var str = string.Empty;
 
-            for (int i = 0; i < this._parts.Count; i++)
+            for (var i = 0; i < _parts.Count; i++)
             {
-                str += this._parts[i] + ", ";
+                str += _parts[i] + ", ";
             }
 
             str = str.Remove(str.Length - 2); // removing last ",c"
