@@ -17,6 +17,8 @@ namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
             var builder = new ConcreteBuilder();
             director.Builder = builder;
 
+            
+
             Console.WriteLine("Standard basic product:");
             director.BuildMinimalViableProduct();
             Console.WriteLine(builder.GetProduct().ListParts());
