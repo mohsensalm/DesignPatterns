@@ -12,7 +12,7 @@ namespace Builder.ex2
     /// </summary>
     public class HeroBuilder : IVehicleBuilder
     {
-        Vehicle objVehicle = new ();
+        readonly Vehicle objVehicle = new ();
         public void SetModel()
         {
             objVehicle.Model = "Hero";
