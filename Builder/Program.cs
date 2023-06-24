@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using Builder;
+using Builder.ex2;
 
 namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
 {
@@ -33,6 +34,23 @@ namespace RefactoringGuru.DesignPatterns.Builder.Conceptual
             builder.BuildPartA();
             builder.BuildPartC();
             Console.Write(builder.GetProduct().ListParts());
+
+
+            Console.WriteLine(  );
+
+                var vehicleCreator = new VehicleCreator(new HeroBuilder());
+            vehicleCreator.CreateVehicle();
+            var vehicle = vehicleCreator.GetVehicle();
+            vehicle.ShowInfo();
+
+            Console.WriteLine("---------------------------------------------");
+
+            vehicleCreator = new VehicleCreator(new HondaBuilder());
+            vehicleCreator.CreateVehicle();
+            vehicle = vehicleCreator.GetVehicle();
+            vehicle.ShowInfo();
+
+            Console.ReadKey();
         }
     }
 }
