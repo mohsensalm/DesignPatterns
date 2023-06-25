@@ -12,7 +12,7 @@ namespace Builder
     // optional, since the client can control builders directly.
     public class Director
     {
-        private  IBuilder  _builder;
+        private  IBuilder? _builder;
 
         public IBuilder Builder
         {
