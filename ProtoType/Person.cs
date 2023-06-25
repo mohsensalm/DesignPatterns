@@ -22,7 +22,7 @@ namespace ProtoType
         {
             var clone = (Person) MemberwiseClone();
             clone.IdInfo = new IdInfo (IdInfo.IdNumber);
-            clone.Name = string.Copy(Name);
+            clone.Name = Name ;
             return clone;
         }
     }
