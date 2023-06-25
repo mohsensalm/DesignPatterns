@@ -16,8 +16,6 @@ internal class Program
 
     private static void Main(string[] args)
     {
-
-
         var p1 = new Person
         {
             Age = 42,
@@ -54,25 +52,30 @@ internal class Program
         DisplayValues(p2);
         Console.WriteLine("   p3 instance values (everything was kept the same):");
         DisplayValues(p3);
+
+
+
         Console.WriteLine("0000000000000000000");
 
-        Developer dev = new Developer();
+
+
+        var dev = new Developer();
         dev.Name = "Rahul";
         dev.Role = "Team Leader";
         dev.PreferredLanguage = "C#";
 
-        Developer devCopy = (Developer)dev.Clone();
+        var devCopy = (Developer)dev.Clone();
         devCopy.Name = "Arif"; //Not mention Role and PreferredLanguage, it will copy above
 
         Console.WriteLine(dev.GetDetails());
         Console.WriteLine(devCopy.GetDetails());
 
-        Typist typist = new Typist();
+        var typist = new Typist();
         typist.Name = "Monu";
         typist.Role = "Typist";
         typist.WordsPerMinute = 120;
 
-        Typist typistCopy = (Typist)typist.Clone();
+        var typistCopy = (Typist)typist.Clone();
         typistCopy.Name = "Sahil";
         typistCopy.WordsPerMinute = 115;//Not mention Role, it will copy above
 
