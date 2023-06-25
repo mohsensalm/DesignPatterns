@@ -12,7 +12,7 @@ namespace ProtoType
 
         public IdInfo(int idNumber)
         {
-            this.IdNumber = idNumber;
+            IdNumber = idNumber;
         }
     }
 }

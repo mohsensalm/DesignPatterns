@@ -15,12 +15,12 @@ namespace ProtoType
 
         public Person ShallowCopy()
         {
-            return (Person)this.MemberwiseClone();
+            return (Person) MemberwiseClone();
         }
 
         public Person DeepCopy()
         {
-            var clone = (Person)this.MemberwiseClone();
+            var clone = (Person) MemberwiseClone();
             clone.IdInfo = new IdInfo(IdInfo.IdNumber);
             clone.Name = string.Copy(Name);
             return clone;
