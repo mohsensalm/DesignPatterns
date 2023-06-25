@@ -9,8 +9,8 @@ internal class Program
 
     public static void DisplayValues(Person p)
     {
-        Console.WriteLine("      Name: {0}, Age: {1:d}, BirthDate: {2:MM/dd/yy}",
-            p.Name, p.Age, p.BirthDate);
+        Console.WriteLine("      Name: {0}, Age: {1:d}, BirthDate: {2:MM/dd/yy} , num : {3}",
+            p.Name, p.Age, p.BirthDate,p.num);
         Console.WriteLine("      ID#: {0:d}", p.IdInfo.IdNumber);
     }
 
@@ -19,6 +19,7 @@ internal class Program
         var p1 = new Person
         {
             Age = 42,
+            num = 33,
             BirthDate = Convert.ToDateTime("1977-01-01"),
             Name = "Jack Daniels",
             IdInfo = new IdInfo(666)

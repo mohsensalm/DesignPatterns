@@ -12,7 +12,7 @@ namespace ProtoType.ex2
         public int WordsPerMinute { get; set; }
         public string Name { get; set; }
         public string Role { get; set; }
-        public string PreferredLanguage { get; set; }
+        public string? PreferredLanguage { get; set; }
 
         public IEmployee  Clone()
         {

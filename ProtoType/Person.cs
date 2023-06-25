@@ -8,10 +8,13 @@ namespace ProtoType
 {
     public class Person 
     {
-        public int Age;
+        public int Age ;
         public DateTime BirthDate;
         public string Name;
+        public int num;
+
         public IdInfo IdInfo;
+
 
         public Person ShallowCopy()
         {
