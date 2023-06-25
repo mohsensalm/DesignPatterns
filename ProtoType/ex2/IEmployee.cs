@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProtoType.ex2
 {
-    public interface IEmployee
+    public interface IEmployee 
     {
         IEmployee Clone();
         string GetDetails();

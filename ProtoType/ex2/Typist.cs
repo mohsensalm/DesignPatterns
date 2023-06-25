@@ -15,7 +15,7 @@ namespace ProtoType.ex2
         public IEmployee Clone()
         {
             // Shallow Copy: only top-level objects are duplicated
-            return (IEmployee)MemberwiseClone();
+            return (IEmployee) MemberwiseClone();
 
             // Deep Copy: all objects are duplicated
             //return (IEmployee)this.Clone();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,14 +14,20 @@ namespace ProtoType.ex2
         public string Role { get; set; }
         public string PreferredLanguage { get; set; }
 
-        public IEmployee Clone()
+        public IEmployee  Clone()
         {
             // Shallow Copy: only top-level objects are duplicated
-            return (IEmployee)MemberwiseClone();
+            return (IEmployee) MemberwiseClone();
 
             // Deep Copy: all objects are duplicated
             //return (IEmployee)this.Clone();
+
+            //var clone = (Developer) MemberwiseClone();
+            //clone.Name = "22";
+            //return clone; 
+
         }
+
 
         public string GetDetails()
         {

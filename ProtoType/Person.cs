@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProtoType
 {
-    public class Person
+    public class Person 
     {
         public int Age;
         public DateTime BirthDate;
