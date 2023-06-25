@@ -1,11 +1,23 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using ProtoType.ex2;
+
 namespace ProtoType;
 
 internal class Program
 {
+
+    public static void DisplayValues(Person p)
+    {
+        Console.WriteLine("      Name: {0}, Age: {1:d}, BirthDate: {2:MM/dd/yy}",
+            p.Name, p.Age, p.BirthDate);
+        Console.WriteLine("      ID#: {0:d}", p.IdInfo.IdNumber);
+    }
+
     private static void Main(string[] args)
     {
+
+
         var p1 = new Person
         {
             Age = 42,
@@ -42,12 +54,33 @@ internal class Program
         DisplayValues(p2);
         Console.WriteLine("   p3 instance values (everything was kept the same):");
         DisplayValues(p3);
+        Console.WriteLine("0000000000000000000");
 
-    }
-    public static void DisplayValues(Person p)
-    {
-        Console.WriteLine("      Name: {0}, Age: {1:d}, BirthDate: {2:MM/dd/yy}",
-            p.Name, p.Age, p.BirthDate);
-        Console.WriteLine("      ID#: {0:d}", p.IdInfo.IdNumber);
+        Developer dev = new Developer();
+        dev.Name = "Rahul";
+        dev.Role = "Team Leader";
+        dev.PreferredLanguage = "C#";
+
+        Developer devCopy = (Developer)dev.Clone();
+        devCopy.Name = "Arif"; //Not mention Role and PreferredLanguage, it will copy above
+
+        Console.WriteLine(dev.GetDetails());
+        Console.WriteLine(devCopy.GetDetails());
+
+        Typist typist = new Typist();
+        typist.Name = "Monu";
+        typist.Role = "Typist";
+        typist.WordsPerMinute = 120;
+
+        Typist typistCopy = (Typist)typist.Clone();
+        typistCopy.Name = "Sahil";
+        typistCopy.WordsPerMinute = 115;//Not mention Role, it will copy above
+
+        Console.WriteLine(typist.GetDetails());
+        Console.WriteLine(typistCopy.GetDetails());
+
+        Console.ReadKey();
+
+
     }
 }
