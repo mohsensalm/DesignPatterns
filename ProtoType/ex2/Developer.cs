@@ -23,7 +23,7 @@ namespace ProtoType.ex2
             //return (IEmployee)this.Clone();
 
             //var clone = (Developer) MemberwiseClone();
-            //clone.Name = "22";
+            //clone.Name = "22";                         "using new key word is key of deep clone? and implement ref type "
             //return clone; 
 
         }

@@ -21,7 +21,7 @@ namespace ProtoType
         public Person DeepCopy()
         {
             var clone = (Person) MemberwiseClone();
-            clone.IdInfo = new IdInfo(IdInfo.IdNumber);
+            clone.IdInfo = new IdInfo (IdInfo.IdNumber);
             clone.Name = string.Copy(Name);
             return clone;
         }
