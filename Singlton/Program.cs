@@ -8,7 +8,6 @@
         {
             // The client code.
             Singleton s1 = Singleton.GetInstance();
-            s1.someBusinessLogic();
             Singleton s2 = Singleton.GetInstance();
 
             if (s1 == s2)
