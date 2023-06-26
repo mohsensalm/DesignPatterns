@@ -35,7 +35,7 @@ namespace Singlton
 
             Thread process1 = new Thread(() =>
             {
-                TestSingleton("FOO");
+                TestSingleton("foo");
             });
             Thread process2 = new Thread(() =>
             {
@@ -45,6 +45,7 @@ namespace Singlton
             process1.Start();
             process2.Start();
 
+            TestSingleton("fc");
 
             process1.Join();
             process2.Join();
