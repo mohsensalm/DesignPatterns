@@ -79,9 +79,14 @@ namespace Singlton
 
           Spliter();
 
-          doubleChekSinglton singlton = doubleChekSinglton.Instance;
+          doubleChekSinglton singlton1 = doubleChekSinglton.Instance;
           
-         
+         doubleChekSinglton singlton2= doubleChekSinglton.Instance;
+
+         if (singlton2==singlton1)
+         {
+             Console.WriteLine("djchn");
+         }
 
 
         }
