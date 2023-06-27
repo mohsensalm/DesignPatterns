@@ -16,6 +16,8 @@ namespace Singlton._7concept
         private DotNetLazy()
         {
         }
+
     }
+   
 }
 // it is also could check if instance is created or not  by isValueCreated Method.

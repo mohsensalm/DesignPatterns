@@ -68,7 +68,20 @@ namespace Singlton
             e2Singleton.Instance.Show();
             e2Singleton.Instance.Show();
             
-            Console.ReadKey();
+
+
+            Spliter();
+
+            Thread process3 = new Thread(() =>
+            {
+                TestSingleton("foo");
+            });
+            process3.Start();
+            Thread process4 = new Thread(() =>
+            {
+                TestSingleton("BAR");
+            });
+            DotNetLazy.Instance
 
         }
 
