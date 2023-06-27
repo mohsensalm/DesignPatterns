@@ -1,5 +1,6 @@
 ﻿using System.Threading.Channels;
 using Singlton._7concept;
+using Singlton.ex2;
 using Singlton.Singleton;
 
 namespace Singlton
@@ -64,6 +65,10 @@ namespace Singlton
             Spliter();
 
 
+            e2Singleton.Instance.Show();
+            e2Singleton.Instance.Show();
+            
+            Console.ReadKey();
 
         }
 
