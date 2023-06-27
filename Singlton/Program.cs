@@ -1,4 +1,6 @@
-﻿using Singlton.Singleton;
+﻿using System.Threading.Channels;
+using Singlton._7concept;
+using Singlton.Singleton;
 
 namespace Singlton
 {
@@ -6,6 +8,14 @@ namespace Singlton
 
     class Program
     {
+        public static void Spliter()
+        {
+            Console.WriteLine("..................................................");
+            Console.WriteLine();
+        }
+
+
+
         static void Main(string[] args)
         {
             // The client code.
@@ -22,7 +32,6 @@ namespace Singlton
             }
 
 
-            Console.WriteLine("oooooooooooooooooooooo");
             // The client code.
 
 
@@ -32,6 +41,8 @@ namespace Singlton
                 "If you see different values, then 2 singletons were created (booo!!)",
                 "RESULT:"
             );
+
+            Spliter();
 
             Thread process1 = new Thread(() =>
             {
@@ -49,6 +60,11 @@ namespace Singlton
 
             process1.Join();
             process2.Join();
+
+            Spliter();
+
+
+
         }
 
         public static void TestSingleton(string value)
@@ -56,6 +72,10 @@ namespace Singlton
             ThreadSafeSinglton singleton = ThreadSafeSinglton.GetInstance(value);
             Console.WriteLine(singleton.Value);
         }
+
+
+
+
     }
-    
+
 }
