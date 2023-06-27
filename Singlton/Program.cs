@@ -76,6 +76,11 @@ namespace Singlton
           sing.Name = "cd";
           sing.Show();
           DotNetLazy.Test();
+
+          Spliter();
+
+          doubleChekSinglton singlton = doubleChekSinglton.Instance;
+          
          
 
 
