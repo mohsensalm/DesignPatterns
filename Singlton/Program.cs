@@ -5,7 +5,7 @@ using Singlton.Singleton;
 
 namespace Singlton
 {
-    
+
 
     class Program
     {
@@ -67,21 +67,17 @@ namespace Singlton
 
             e2Singleton.Instance.Show();
             e2Singleton.Instance.Show();
-            
+
 
 
             Spliter();
 
-            Thread process3 = new Thread(() =>
-            {
-                TestSingleton("foo");
-            });
-            process3.Start();
-            Thread process4 = new Thread(() =>
-            {
-                TestSingleton("BAR");
-            });
-            DotNetLazy.Instance
+          DotNetLazy sing= DotNetLazy.Instance;
+          sing.Name = "cd";
+          sing.Show();
+          DotNetLazy.Test();
+         
+
 
         }
 
