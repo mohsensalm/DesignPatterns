@@ -8,6 +8,7 @@ namespace Singlton._7concept
 {
     public sealed class CompleteLazy
     {
+        private  int _count;
         private CompleteLazy()
         {
         }
@@ -24,6 +25,16 @@ namespace Singlton._7concept
             }
 
             internal static readonly CompleteLazy instance = new CompleteLazy();
+        }
+
+        public void count(int count)
+        {
+            _count=count;   
+        }
+
+        public void dosomethimg()
+        {
+            
         }
     }
 }
