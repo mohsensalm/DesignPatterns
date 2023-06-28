@@ -16,7 +16,7 @@ namespace Singlton._7concept
         {
         }
 
-        private ParticularLazyAndThreadSafe()
+        private  ParticularLazyAndThreadSafe()
         {
         }
 

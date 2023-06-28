@@ -10,10 +10,10 @@ namespace Singlton._7concept
     {
         public string Name { get; set; }
 
-        private static readonly Lazy<DotNetLazy> lazy =
+        private static readonly Lazy<DotNetLazy> Lazy =
             new Lazy<DotNetLazy>(() => new DotNetLazy());
 
-        public static DotNetLazy Instance {get { return lazy.Value; }
+        public static DotNetLazy Instance {get { return Lazy.Value; }
         }
 
         private DotNetLazy()

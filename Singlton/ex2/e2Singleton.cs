@@ -37,11 +37,16 @@ namespace Singlton.ex2
                 lock (SyncLock)
                 {
                     if (e2Singleton._instance == null)
-                        e2Singleton._instance = new e2Singleton();
+                        _instance = new e2Singleton();
 
                     return e2Singleton._instance;
                 }
             }
+        }
+
+        private static int bew()
+        {
+            throw new NotImplementedException();
         }
 
         public void Show()
