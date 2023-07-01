@@ -38,7 +38,7 @@ namespace Adapter
             client.ShowEmployeeList();
 
 
-            Console.WriteLine();
+            Console.WriteLine("ex3");
 
             // Non-adapted chemical compound
             Compound unknown = new Compound();
