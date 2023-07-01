@@ -18,7 +18,7 @@ namespace Adapter.ex2
             string[][] employees = GetEmployees();
             foreach (string[] employee in employees)
             {
-                employeeList.Add(employee[0]);
+                employeeList.Add(employee[0]); 
                 employeeList.Add(",");
                 employeeList.Add(employee[1]);
                 employeeList.Add(",");

@@ -8,9 +8,9 @@ namespace Adapter
 {
     class Adaptee
     {
-        public string GetSpecificRequest()
+        public string GetSpecificRequest1()
         {
-            return "Specific request.";
+            return "Specific request with .";
         }
     }
 }

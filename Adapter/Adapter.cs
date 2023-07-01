@@ -17,7 +17,7 @@ namespace Adapter
 
         public string GetRequest()
         {
-            return $"This is '{ _adaptee.GetSpecificRequest() }'";
+            return $"This is '{ _adaptee.GetSpecificRequest1() }'";
         }
     }
 }

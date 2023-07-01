@@ -2,6 +2,8 @@
 //Console.WriteLine("Hello, World!");
 
 using Adapter.ex2;
+using Adapter.ex3;
+using Adapter.RealWorld;
 
 namespace Adapter
 {
@@ -21,7 +23,7 @@ namespace Adapter
     {
         static void Main(string[] args)
         {
-            Adaptee adaptee = new Adaptee();
+            var adaptee = new Adaptee();
             ITarget target = new Adapter(adaptee);
 
             Console.WriteLine("Adaptee interface is incompatible with the client.");
@@ -29,12 +31,26 @@ namespace Adapter
 
             Console.WriteLine(target.GetRequest());
 
-            Console.WriteLine();
+            Console.WriteLine("ex2");
 
             ITargete2 Itarget = new EmployeeAdapter();
-            ThirdPartyBillingSystem client = new ThirdPartyBillingSystem(Itarget);
+            var client = new ThirdPartyBillingSystem(Itarget);
             client.ShowEmployeeList();
 
+
+            Console.WriteLine();
+
+            // Non-adapted chemical compound
+            Compound unknown = new Compound();
+            unknown.Display();
+            // Adapted chemical compounds
+            Compound water = new RichCompound("Water");
+            water.Display();
+            Compound benzene = new RichCompound("Benzene");
+            benzene.Display();
+            Compound ethanol = new RichCompound("Ethanol");
+            ethanol.Display();
+            // Wait for user
             Console.ReadKey();
 
         }
